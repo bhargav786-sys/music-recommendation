@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Music Recommender - Home</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="moods.html">Moods</a>
+  <a href="genres.html">Genres</a>
+  <a href="artists.html">Artists</a>
+</nav>
+<header>
+  <h1>Discover Music 🎧</h1>
+  <input id="search" type="text" placeholder="Search songs or artists..." onkeyup="search()" />
+</header>
+<main id="content">
+  <section class="card">
+    <h2>Trending Songs</h2>
+    <div class="songs">
+      <article class="song">
+        <h3>Blinding Lights</h3>
+        <p>The Weeknd</p>
+        <iframe src="https://open.spotify.com/embed/track/0VjIjW4GlUZAMYd2vXMi3b" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </article>
+      <article class="song">
+        <h3>Levitating</h3>
+        <p>Dua Lipa</p>
+        <iframe src="https://open.spotify.com/embed/track/463CkQjx2Zk1yXoBuierM9" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </article>
+      <article class="song">
+        <h3>Circles</h3>
+        <p>Post Malone</p>
+        <iframe src="https://open.spotify.com/embed/track/21jGcNKet2qwijlDFuPiPb" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </article>
+    </div>
+  </section>
+</main>
+<script>
+function search() {
+  let input = document.getElementById('search').value.toLowerCase();
+  let songs = document.querySelectorAll('.song');
+  songs.forEach(song => {
+    let title = song.querySelector('h3').textContent.toLowerCase();
+    let artist = song.querySelector('p').textContent.toLowerCase();
+    if (title.includes(input) || artist.includes(input)) {
+      song.style.display = '';
+    } else {
+      song.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>
+
