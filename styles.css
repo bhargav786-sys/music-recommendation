@@ -1,0 +1,147 @@
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body{
+background:#121212;
+color:white;
+line-height:1.6;
+}
+
+/* Navbar */
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
+background:#1db954;
+padding:15px;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#121212;
+}
+
+/* Header */
+header{
+text-align:center;
+padding:30px 15px;
+}
+
+header h1{
+font-size:2.2rem;
+margin-bottom:15px;
+}
+
+/* Search Bar */
+#search{
+width:90%;
+max-width:500px;
+padding:12px;
+border:none;
+border-radius:25px;
+font-size:16px;
+outline:none;
+}
+
+/* Main Content */
+main{
+padding:20px;
+max-width:1200px;
+margin:auto;
+}
+
+/* Card Section */
+.card{
+background:#1e1e1e;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.card h2{
+margin-bottom:20px;
+}
+
+/* Songs Grid */
+.songs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+/* Song Card */
+.song{
+background:#2a2a2a;
+padding:15px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+}
+
+.song:hover{
+transform:translateY(-5px);
+background:#333;
+}
+
+.song h3{
+margin-bottom:5px;
+}
+
+.song p{
+color:#aaa;
+margin-bottom:10px;
+}
+
+/* Spotify iframe */
+.song iframe{
+width:100%;
+border-radius:10px;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media(max-width:768px){
+
+nav{
+flex-wrap:wrap;
+gap:15px;
+}
+
+header h1{
+font-size:1.8rem;
+}
+
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+header h1{
+font-size:1.5rem;
+}
+
+#search{
+width:100%;
+}
+
+.song{
+padding:12px;
+}
+
+}
